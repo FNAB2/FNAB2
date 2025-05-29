@@ -457,24 +457,18 @@
       }
     });
 
-    // Obsługa przycisku startowego
     startButton.addEventListener('click', () => {
-      // Rozpocznij grę
       playSound(scene1Sound, 0.3);
       
-      // Ukryj ekran startowy
       startScreen.style.display = 'none';
       fadeOverlay.style.opacity = '0';
       
-      // Załaduj pierwszą scenę
       loadScene(1);
     });
 
-    // Inicjalizacja - ukryj canvas i gifContainer przed rozpoczęciem gry
     canvas.style.display = 'none';
     gifContainer.style.display = 'none';
     
-    // Po kliknięciu przycisku startowego pokaż grę
     startButton.addEventListener('click', () => {
       canvas.style.display = 'block';
       gifContainer.style.display = 'flex';
